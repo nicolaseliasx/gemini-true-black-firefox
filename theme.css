@@ -70,12 +70,7 @@ side-navigation-v2 {
 side-navigation-content {
   border-inline-end: 1px solid #262626 !important;
   box-sizing: border-box !important;
-  padding-inline-end: 8px !important;
-}
-
-side-navigation-content infinite-scroller {
-  box-sizing: border-box !important;
-  padding-inline-end: 8px !important;
+  padding-inline-end: 4px !important;
 }
 
 side-navigation-v2 a.gem-nav-list-item.is-active,
