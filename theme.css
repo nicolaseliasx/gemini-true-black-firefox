@@ -73,6 +73,11 @@ side-navigation-content {
   padding-inline-end: 8px !important;
 }
 
+side-navigation-content infinite-scroller {
+  box-sizing: border-box !important;
+  padding-inline-end: 8px !important;
+}
+
 side-navigation-v2 a.gem-nav-list-item.is-active,
 side-navigation-v2 a.gem-nav-list-item.mdc-list-item--activated {
   background-color: #1a1a1a !important;

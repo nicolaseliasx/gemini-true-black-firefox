@@ -22,6 +22,7 @@
       }
       side-navigation-v2 { width: 300px; box-sizing: border-box; background: var(--lumi-sys-color--surface-bright); }
       side-navigation-content { display: block; width: 299px; height: 100%; box-sizing: border-box; }
+      infinite-scroller { display: block; width: 100%; box-sizing: border-box; }
       .new-conversation { display: block; margin: 50px 30px 0; width: 240px; height: 40px; background: #000; }
       .chat-entry { display: block; height: 40px; margin-top: 100px; background: #000; }
       main { flex: 1; position: relative; background: var(--gem-sys-color--surface); }
@@ -34,7 +35,7 @@
   </head>
   <body>
     <div class="theme-host zero-state-theme light-theme">
-      <side-navigation-v2><side-navigation-content><a class="new-conversation gem-nav-list-item is-active mdc-list-item--activated"></a><a class="chat-entry gem-nav-list-item is-active"></a></side-navigation-content></side-navigation-v2>
+      <side-navigation-v2><side-navigation-content><a class="new-conversation gem-nav-list-item is-active mdc-list-item--activated"></a><infinite-scroller><a class="chat-entry gem-nav-list-item is-active"></a></infinite-scroller></side-navigation-content></side-navigation-v2>
       <main><div class="glow"></div><input-area-v2 class="initial-input-area"></input-area-v2><div class="mode-indicator"></div></main>
     </div>
     <script>
