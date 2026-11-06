@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      html, body { margin: 0; width: 100%; height: 100%; }
+      .theme-host {
+        --gem-sys-color--surface: #111111;
+        --gem-sys-color--surface-container: #252525;
+        --bard-color-sidenav-background-desktop: #202020;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        background: var(--gem-sys-color--surface);
+      }
+      .light .theme-host {
+        --gem-sys-color--surface: #ffffff;
+        --gem-sys-color--surface-container: #eeeeee;
+        --bard-color-sidenav-background-desktop: #e9eef6;
+      }
+      aside { width: 300px; background: var(--bard-color-sidenav-background-desktop); }
+      main { flex: 1; position: relative; background: var(--gem-sys-color--surface); }
+      .glow { position: absolute; inset: 100px 100px 250px; background: radial-gradient(ellipse, #203b88, transparent 70%); }
+      .initial-input-area-container { position: absolute; left: 200px; top: 550px; width: 500px; height: 60px; background: var(--gem-sys-color--surface-container); border-radius: 30px; }
+      .mode-indicator { position: absolute; left: 200px; top: 700px; width: 40px; height: 40px; background: #b00000; }
+      .dark-theme .mode-indicator { background: #008000; }
+    </style>
+    <link rel="stylesheet" href="../theme.css">
+    <script>if (location.search.includes('light')) document.documentElement.classList.add('light');</script>
+  </head>
+  <body>
+    <div class="theme-host zero-state-theme light-theme">
+      <aside></aside>
+      <main><div class="glow"></div><div class="initial-input-area-container"></div><div class="mode-indicator"></div></main>
+    </div>
+    <script src="../theme.js"></script>
+  </body>
+</html>

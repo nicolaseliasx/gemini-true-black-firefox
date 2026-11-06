@@ -1,0 +1,85 @@
+/* Scope is limited to gemini.google.com by manifest.json. */
+:root,
+:root .theme-host {
+  color-scheme: dark !important;
+  --gem-sys-color--surface: #000 !important;
+  --gem-sys-color--surface-dim: #000 !important;
+  --gem-sys-color--surface-bright: #1b1b1b !important;
+  --gem-sys-color--surface-container-lowest: #000 !important;
+  --gem-sys-color--surface-container-low: #000 !important;
+  --gem-sys-color--surface-container: #000 !important;
+  --gem-sys-color--surface-container-high: #1b1b1b !important;
+  --gem-sys-color--surface-container-highest: #222 !important;
+  --gem-sys-color--surface-variant: #1b1b1b !important;
+  --gem-sys-color--on-surface: #e8e8e8 !important;
+  --gem-sys-color--on-surface-low: #aaa !important;
+  --gem-sys-color--on-surface-variant: #b4b4b4 !important;
+  --gem-sys-color--outline: #444 !important;
+  --gem-sys-color--outline-variant: #303030 !important;
+  --lumi-sys-color--surface: #000 !important;
+  --lumi-sys-color--surface-dim: #000 !important;
+  --lumi-sys-color--surface-background: #000 !important;
+  --lumi-sys-color--surface-bright: #1b1b1b !important;
+  --lumi-sys-color--on-surface: #e8e8e8 !important;
+  --lumi-sys-color--on-surface-low: rgba(255, 255, 255, .12) !important;
+  --lumi-sys-color--on-surface-variant: #b4b4b4 !important;
+  --mat-sys-on-surface: #e8e8e8 !important;
+  --mat-app-text-color: #e8e8e8 !important;
+  --bard-color-sidenav-background-desktop: #000 !important;
+  --bard-color-sidenav-background-mobile: #000 !important;
+  --bard-color-surface-dim-tmp: #000 !important;
+  --bard-color-footer-background: #000 !important;
+  --bard-color-synthetic--chat-window-surface: #000 !important;
+  --bard-color-synthetic--chat-window-surface-container: #000 !important;
+  --bard-color-synthetic--chat-window-surface-container-high: #1b1b1b !important;
+  --bard-color-synthetic--chat-window-surface-container-highest: #222 !important;
+  --bard-color-lm-glow-chat: #000 !important;
+  --bard-color-lm-glow-task-base: #000 !important;
+  --bard-color-lm-glow-task-mid: #000 !important;
+  --bard-color-lm-glow-bloom: #000 !important;
+  --mat-sidenav-container-background-color: #000 !important;
+  --mat-sidenav-content-background-color: #000 !important;
+  --mat-sidenav-container-text-color: #e8e8e8 !important;
+  --mat-sidenav-content-text-color: #e8e8e8 !important;
+  --mat-menu-container-color: #111 !important;
+  --mdc-dialog-container-color: #111 !important;
+}
+
+html,
+body,
+mat-sidenav-container,
+mat-sidenav-content,
+.theme-host,
+.zero-state-theme {
+  background-color: #000 !important;
+}
+
+body {
+  color: #e8e8e8 !important;
+}
+
+mat-sidenav,
+.mat-drawer {
+  background-color: #000 !important;
+}
+
+.initial-input-area-container,
+.input-area-container {
+  background: #1b1b1b !important;
+  border-color: #303030 !important;
+  box-shadow: none !important;
+}
+
+.mat-mdc-menu-panel,
+.mat-mdc-dialog-surface,
+.cdk-dialog-container {
+  background-color: #111 !important;
+  border: 1px solid #303030 !important;
+  color: #e8e8e8 !important;
+}
+
+.zero-state-theme :is([class*="glow"], [class*="aurora"]) {
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
