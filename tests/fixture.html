@@ -7,7 +7,9 @@
       .theme-host {
         --gem-sys-color--surface: #111111;
         --gem-sys-color--surface-container: #252525;
+        --lumi-sys-color--surface-bright: #1b1b1b;
         --bard-color-sidenav-background-desktop: #202020;
+        --bard-color-new-conversation-button: #000;
         width: 100vw;
         height: 100vh;
         display: flex;
@@ -18,10 +20,12 @@
         --gem-sys-color--surface-container: #eeeeee;
         --bard-color-sidenav-background-desktop: #e9eef6;
       }
-      aside { width: 300px; background: var(--bard-color-sidenav-background-desktop); }
+      side-navigation-v2 { width: 300px; box-sizing: border-box; background: var(--lumi-sys-color--surface-bright); }
+      side-navigation-content { display: block; width: 299px; height: 100%; box-sizing: border-box; }
+      .new-conversation { display: block; margin: 50px 30px 0; width: 240px; height: 40px; background: #000; }
+      .chat-entry { display: block; height: 40px; margin-top: 100px; background: #000; }
       main { flex: 1; position: relative; background: var(--gem-sys-color--surface); }
       .glow { position: absolute; inset: 100px 100px 250px; background: radial-gradient(ellipse, #203b88, transparent 70%); }
-      .initial-input-area-container { position: absolute; left: 200px; top: 550px; width: 500px; height: 60px; background: var(--gem-sys-color--surface-container); border-radius: 30px; }
       .mode-indicator { position: absolute; left: 200px; top: 700px; width: 40px; height: 40px; background: #b00000; }
       .dark-theme .mode-indicator { background: #008000; }
     </style>
@@ -30,9 +34,12 @@
   </head>
   <body>
     <div class="theme-host zero-state-theme light-theme">
-      <aside></aside>
-      <main><div class="glow"></div><div class="initial-input-area-container"></div><div class="mode-indicator"></div></main>
+      <side-navigation-v2><side-navigation-content><a class="new-conversation gem-nav-list-item is-active mdc-list-item--activated"></a><a class="chat-entry gem-nav-list-item is-active"></a></side-navigation-content></side-navigation-v2>
+      <main><div class="glow"></div><input-area-v2 class="initial-input-area"></input-area-v2><div class="mode-indicator"></div></main>
     </div>
+    <script>
+      document.querySelector('input-area-v2').attachShadow({mode: 'open'}).innerHTML = '<style>:host{position:absolute;left:200px;top:550px;width:500px;height:60px}.box{width:100%;height:100%;background:var(--lumi-sys-color--surface-bright);border-radius:32px}</style><div class="box"></div>';
+    </script>
     <script src="../theme.js"></script>
   </body>
 </html>

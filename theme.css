@@ -4,7 +4,7 @@
   color-scheme: dark !important;
   --gem-sys-color--surface: #000 !important;
   --gem-sys-color--surface-dim: #000 !important;
-  --gem-sys-color--surface-bright: #1b1b1b !important;
+  --gem-sys-color--surface-bright: #000 !important;
   --gem-sys-color--surface-container-lowest: #000 !important;
   --gem-sys-color--surface-container-low: #000 !important;
   --gem-sys-color--surface-container: #000 !important;
@@ -19,7 +19,7 @@
   --lumi-sys-color--surface: #000 !important;
   --lumi-sys-color--surface-dim: #000 !important;
   --lumi-sys-color--surface-background: #000 !important;
-  --lumi-sys-color--surface-bright: #1b1b1b !important;
+  --lumi-sys-color--surface-bright: #000 !important;
   --lumi-sys-color--on-surface: #e8e8e8 !important;
   --lumi-sys-color--on-surface-low: rgba(255, 255, 255, .12) !important;
   --lumi-sys-color--on-surface-variant: #b4b4b4 !important;
@@ -27,6 +27,8 @@
   --mat-app-text-color: #e8e8e8 !important;
   --bard-color-sidenav-background-desktop: #000 !important;
   --bard-color-sidenav-background-mobile: #000 !important;
+  --bard-color-new-conversation-button: #1a1a1a !important;
+  --bard-color-on-new-conversation-button: #e8e8e8 !important;
   --bard-color-surface-dim-tmp: #000 !important;
   --bard-color-footer-background: #000 !important;
   --bard-color-synthetic--chat-window-surface: #000 !important;
@@ -38,6 +40,7 @@
   --bard-color-lm-glow-task-mid: #000 !important;
   --bard-color-lm-glow-bloom: #000 !important;
   --mat-sidenav-container-background-color: #000 !important;
+  --mat-sidenav-container-divider-color: #262626 !important;
   --mat-sidenav-content-background-color: #000 !important;
   --mat-sidenav-container-text-color: #e8e8e8 !important;
   --mat-sidenav-content-text-color: #e8e8e8 !important;
@@ -59,14 +62,34 @@ body {
 }
 
 mat-sidenav,
-.mat-drawer {
+.mat-drawer,
+side-navigation-v2 {
   background-color: #000 !important;
+}
+
+side-navigation-content {
+  border-inline-end: 1px solid #262626 !important;
+  box-sizing: border-box !important;
+  padding-inline-end: 8px !important;
+}
+
+side-navigation-v2 a.gem-nav-list-item.is-active,
+side-navigation-v2 a.gem-nav-list-item.mdc-list-item--activated {
+  background-color: #1a1a1a !important;
+}
+
+input-area,
+.initial-input-area,
+input-area-v2 {
+  --gem-sys-color--surface-bright: #1b1b1b !important;
+  --lumi-sys-color--surface-bright: #1b1b1b !important;
 }
 
 .initial-input-area-container,
 .input-area-container {
   background: #1b1b1b !important;
   border-color: #303030 !important;
+  border-radius: 32px !important;
   box-shadow: none !important;
 }
 
