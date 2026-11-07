@@ -93,7 +93,7 @@ side-navigation-v2 a.gem-nav-list-item {
 }
 
 /* Translucent grey hover/focus layer (it is painted above the label, so it must not be opaque). */
-side-navigation-v2 a.gem-nav-list-item::before {
+.mat-mdc-list-item::before {
   background-color: rgba(255, 255, 255, .1) !important;
 }
 
@@ -156,19 +156,19 @@ bard-sidenav .bottom-gradient {
   background-image: none !important;
 }
 
-/* No click ripple or hover transition on the sidebar. */
-side-navigation-v2 {
+/* No click ripple or hover transition on list items (sidebar, search dialog, menus). */
+:root {
   --mat-ripple-color: transparent !important;
   --mat-ripple-hover-opacity: 0 !important;
 }
 
-side-navigation-v2 .mat-ripple-element {
+.mat-ripple-element {
   display: none !important;
 }
 
-side-navigation-v2 a.gem-nav-list-item,
-side-navigation-v2 a.gem-nav-list-item::before,
-side-navigation-v2 a.gem-nav-list-item::after {
+.mat-mdc-list-item,
+.mat-mdc-list-item::before,
+.mat-mdc-list-item::after {
   transition: none !important;
   animation: none !important;
 }

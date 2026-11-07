@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Gemini True Black",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "A true black (OLED) dark theme for Gemini. Layout and features stay untouched.",
   "browser_specific_settings": {
     "gecko": {
