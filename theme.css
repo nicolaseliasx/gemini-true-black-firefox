@@ -85,6 +85,13 @@ side-navigation-v2 {
   background-color: var(--tb-black) !important;
 }
 
+/* 2px gap between stacked pills: a transparent border keeps the item height and trims the highlight. */
+side-navigation-v2 a.gem-nav-list-item {
+  border-block: 1px solid transparent !important;
+  box-sizing: border-box !important;
+  background-clip: padding-box !important;
+}
+
 /* Translucent grey hover/focus layer (it is painted above the label, so it must not be opaque). */
 side-navigation-v2 a.gem-nav-list-item::before {
   background-color: rgba(255, 255, 255, .1) !important;
