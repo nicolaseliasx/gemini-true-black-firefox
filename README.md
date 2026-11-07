@@ -1,28 +1,17 @@
-# Gemini ChatGPT Black
+# Gemini True Black
 
-Extensão Firefox que aplica ao Gemini uma paleta preta inspirada no ChatGPT. Preserva o layout e as funções do Gemini. Funciona independentemente do tema claro ou escuro selecionado no site. Um pequeno script ativa a classe visual escura do próprio Gemini sem mudar a preferência salva da conta.
+A Firefox extension that gives [Gemini](https://gemini.google.com) a **true black (OLED) dark theme**.
 
-## Teste local
+Gemini's own dark mode uses dark greys. This extension replaces them with pure `#000` backgrounds on the sidebar, chat area and menus, so the interface blends into the screen on OLED displays, with subtle raised surfaces for the input box and selected items.
 
-1. Abra `about:debugging#/runtime/this-firefox` no Firefox.
-2. Clique em **Load Temporary Add-on** e selecione `manifest.json`.
-3. Recarregue `https://gemini.google.com/app`.
+- **Always dark.** Works regardless of the light/dark setting in Gemini or your Google account, and never changes that saved preference.
+- **Nothing else changes.** Layout, features, images and syntax-highlighting colors are preserved.
+- **Firefox only.** Built and tested for Firefox (Manifest V3); other browsers are not supported.
 
-A instalação temporária termina quando o Firefox reinicia. A instalação permanente no Firefox normal exige um XPI assinado pela Mozilla, mesmo para distribuição pessoal não listada.
+## Install
 
-## Verificação
+Download the latest `.xpi`/`.zip` from the [Releases](../../releases) page. Firefox requires add-ons to be signed by Mozilla for permanent installation in release builds; unsigned builds can be loaded in Firefox Developer Edition, Nightly or ESR with `xpinstall.signatures.required` set to `false`.
 
-`sh tests/theme.test.sh` testa as cores de fundo, barra lateral, brilho e campo de entrada em um fixture nos modos claro e escuro com Firefox headless e ImageMagick. Também é necessário conferir visualmente o Gemini autenticado, incluindo conversa, menus e janela estreita.
+## Privacy
 
-Para validar e gerar um pacote sem os arquivos de teste e documentação:
-
-```sh
-npx --yes web-ext lint --source-dir . --warnings-as-errors --ignore-files tests README.md AGENTS.md CLAUDE.md
-npx --yes web-ext build --source-dir . --overwrite-dest --ignore-files tests README.md AGENTS.md CLAUDE.md
-```
-
-O arquivo em `web-ext-artifacts/` ainda não é instalável permanentemente no Firefox comum. Para uso pessoal permanente, envie esta versão para assinatura **unlisted** no [Firefox Add-on Developer Hub](https://addons.mozilla.org/developers/) ou use `web-ext sign --channel=unlisted` com credenciais AMO próprias. Instale o XPI assinado retornado pela Mozilla.
-
-## Privacidade
-
-A extensão só injeta CSS e ajusta classes de tema em `gemini.google.com`. Ela não lê mensagens, não faz requisições e não armazena dados.
+The extension only injects CSS and toggles theme classes on `gemini.google.com`. It does not read your conversations, make network requests or store any data.

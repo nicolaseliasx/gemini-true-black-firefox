@@ -1,51 +1,68 @@
-/* Scope is limited to gemini.google.com by manifest.json. */
+/* Gemini True Black. Scope is limited to gemini.google.com by manifest.json. */
+
+/* Palette */
+:root {
+  --tb-black: #000;
+  --tb-active: #1a1a1a;
+  --tb-raised: #1b1b1b;
+  --tb-raised-high: #222;
+  --tb-overlay: #111;
+  --tb-divider: #262626;
+  --tb-border: #303030;
+  --tb-outline: #444;
+  --tb-text: #e8e8e8;
+  --tb-text-muted: #b4b4b4;
+  --tb-text-dim: #aaa;
+}
+
+/* Gemini, Lumi and Material design tokens */
 :root,
 :root .theme-host {
   color-scheme: dark !important;
-  --gem-sys-color--surface: #000 !important;
-  --gem-sys-color--surface-dim: #000 !important;
-  --gem-sys-color--surface-bright: #000 !important;
-  --gem-sys-color--surface-container-lowest: #000 !important;
-  --gem-sys-color--surface-container-low: #000 !important;
-  --gem-sys-color--surface-container: #000 !important;
-  --gem-sys-color--surface-container-high: #1b1b1b !important;
-  --gem-sys-color--surface-container-highest: #222 !important;
-  --gem-sys-color--surface-variant: #1b1b1b !important;
-  --gem-sys-color--on-surface: #e8e8e8 !important;
-  --gem-sys-color--on-surface-low: #aaa !important;
-  --gem-sys-color--on-surface-variant: #b4b4b4 !important;
-  --gem-sys-color--outline: #444 !important;
-  --gem-sys-color--outline-variant: #303030 !important;
-  --lumi-sys-color--surface: #000 !important;
-  --lumi-sys-color--surface-dim: #000 !important;
-  --lumi-sys-color--surface-background: #000 !important;
-  --lumi-sys-color--surface-bright: #000 !important;
-  --lumi-sys-color--on-surface: #e8e8e8 !important;
+  --gem-sys-color--surface: var(--tb-black) !important;
+  --gem-sys-color--surface-dim: var(--tb-black) !important;
+  --gem-sys-color--surface-bright: var(--tb-black) !important;
+  --gem-sys-color--surface-container-lowest: var(--tb-black) !important;
+  --gem-sys-color--surface-container-low: var(--tb-black) !important;
+  --gem-sys-color--surface-container: var(--tb-black) !important;
+  --gem-sys-color--surface-container-high: var(--tb-raised) !important;
+  --gem-sys-color--surface-container-highest: var(--tb-raised-high) !important;
+  --gem-sys-color--surface-variant: var(--tb-raised) !important;
+  --gem-sys-color--on-surface: var(--tb-text) !important;
+  --gem-sys-color--on-surface-low: var(--tb-text-dim) !important;
+  --gem-sys-color--on-surface-variant: var(--tb-text-muted) !important;
+  --gem-sys-color--outline: var(--tb-outline) !important;
+  --gem-sys-color--outline-variant: var(--tb-border) !important;
+  --lumi-sys-color--surface: var(--tb-black) !important;
+  --lumi-sys-color--surface-dim: var(--tb-black) !important;
+  --lumi-sys-color--surface-background: var(--tb-black) !important;
+  --lumi-sys-color--surface-bright: var(--tb-black) !important;
+  --lumi-sys-color--on-surface: var(--tb-text) !important;
   --lumi-sys-color--on-surface-low: rgba(255, 255, 255, .12) !important;
-  --lumi-sys-color--on-surface-variant: #b4b4b4 !important;
-  --mat-sys-on-surface: #e8e8e8 !important;
-  --mat-app-text-color: #e8e8e8 !important;
-  --bard-color-sidenav-background-desktop: #000 !important;
-  --bard-color-sidenav-background-mobile: #000 !important;
-  --bard-color-new-conversation-button: #1a1a1a !important;
-  --bard-color-on-new-conversation-button: #e8e8e8 !important;
-  --bard-color-surface-dim-tmp: #000 !important;
-  --bard-color-footer-background: #000 !important;
-  --bard-color-synthetic--chat-window-surface: #000 !important;
-  --bard-color-synthetic--chat-window-surface-container: #000 !important;
-  --bard-color-synthetic--chat-window-surface-container-high: #1b1b1b !important;
-  --bard-color-synthetic--chat-window-surface-container-highest: #222 !important;
-  --bard-color-lm-glow-chat: #000 !important;
-  --bard-color-lm-glow-task-base: #000 !important;
-  --bard-color-lm-glow-task-mid: #000 !important;
-  --bard-color-lm-glow-bloom: #000 !important;
-  --mat-sidenav-container-background-color: #000 !important;
-  --mat-sidenav-container-divider-color: #262626 !important;
-  --mat-sidenav-content-background-color: #000 !important;
-  --mat-sidenav-container-text-color: #e8e8e8 !important;
-  --mat-sidenav-content-text-color: #e8e8e8 !important;
-  --mat-menu-container-color: #111 !important;
-  --mdc-dialog-container-color: #111 !important;
+  --lumi-sys-color--on-surface-variant: var(--tb-text-muted) !important;
+  --mat-sys-on-surface: var(--tb-text) !important;
+  --mat-app-text-color: var(--tb-text) !important;
+  --bard-color-sidenav-background-desktop: var(--tb-black) !important;
+  --bard-color-sidenav-background-mobile: var(--tb-black) !important;
+  --bard-color-new-conversation-button: var(--tb-active) !important;
+  --bard-color-on-new-conversation-button: var(--tb-text) !important;
+  --bard-color-surface-dim-tmp: var(--tb-black) !important;
+  --bard-color-footer-background: var(--tb-black) !important;
+  --bard-color-synthetic--chat-window-surface: var(--tb-black) !important;
+  --bard-color-synthetic--chat-window-surface-container: var(--tb-black) !important;
+  --bard-color-synthetic--chat-window-surface-container-high: var(--tb-raised) !important;
+  --bard-color-synthetic--chat-window-surface-container-highest: var(--tb-raised-high) !important;
+  --bard-color-lm-glow-chat: var(--tb-black) !important;
+  --bard-color-lm-glow-task-base: var(--tb-black) !important;
+  --bard-color-lm-glow-task-mid: var(--tb-black) !important;
+  --bard-color-lm-glow-bloom: var(--tb-black) !important;
+  --mat-sidenav-container-background-color: var(--tb-black) !important;
+  --mat-sidenav-container-divider-color: var(--tb-divider) !important;
+  --mat-sidenav-content-background-color: var(--tb-black) !important;
+  --mat-sidenav-container-text-color: var(--tb-text) !important;
+  --mat-sidenav-content-text-color: var(--tb-text) !important;
+  --mat-menu-container-color: var(--tb-overlay) !important;
+  --mdc-dialog-container-color: var(--tb-overlay) !important;
 }
 
 html,
@@ -54,41 +71,41 @@ mat-sidenav-container,
 mat-sidenav-content,
 .theme-host,
 .zero-state-theme {
-  background-color: #000 !important;
+  background-color: var(--tb-black) !important;
 }
 
 body {
-  color: #e8e8e8 !important;
+  color: var(--tb-text) !important;
 }
 
 mat-sidenav,
 .mat-drawer,
 side-navigation-v2 {
-  background-color: #000 !important;
+  background-color: var(--tb-black) !important;
 }
 
 side-navigation-content {
-  border-inline-end: 1px solid #262626 !important;
+  border-inline-end: 1px solid var(--tb-divider) !important;
   box-sizing: border-box !important;
   padding-inline-end: 4px !important;
 }
 
 side-navigation-v2 a.gem-nav-list-item.is-active,
 side-navigation-v2 a.gem-nav-list-item.mdc-list-item--activated {
-  background-color: #1a1a1a !important;
+  background-color: var(--tb-active) !important;
 }
 
 input-area,
 .initial-input-area,
 input-area-v2 {
-  --gem-sys-color--surface-bright: #1b1b1b !important;
-  --lumi-sys-color--surface-bright: #1b1b1b !important;
+  --gem-sys-color--surface-bright: var(--tb-raised) !important;
+  --lumi-sys-color--surface-bright: var(--tb-raised) !important;
 }
 
 .initial-input-area-container,
 .input-area-container {
-  background: #1b1b1b !important;
-  border-color: #303030 !important;
+  background: var(--tb-raised) !important;
+  border-color: var(--tb-border) !important;
   border-radius: 32px !important;
   box-shadow: none !important;
 }
@@ -96,9 +113,9 @@ input-area-v2 {
 .mat-mdc-menu-panel,
 .mat-mdc-dialog-surface,
 .cdk-dialog-container {
-  background-color: #111 !important;
-  border: 1px solid #303030 !important;
-  color: #e8e8e8 !important;
+  background-color: var(--tb-overlay) !important;
+  border: 1px solid var(--tb-border) !important;
+  color: var(--tb-text) !important;
 }
 
 .zero-state-theme :is([class*="glow"], [class*="aurora"]) {

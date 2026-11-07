@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Gemini ChatGPT Black",
-  "version": "0.1.0",
-  "description": "Aplica ao Gemini a paleta preta do ChatGPT, sem alterar suas funções.",
+  "name": "Gemini True Black",
+  "version": "0.2.0",
+  "description": "A true black (OLED) dark theme for Gemini. Layout and features stay untouched.",
   "browser_specific_settings": {
     "gecko": {
-      "id": "gemini-chatgpt-black@ncls.cc",
+      "id": "gemini-true-black@ncls.cc",
       "data_collection_permissions": {
         "required": ["none"]
       }
