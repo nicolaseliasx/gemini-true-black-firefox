@@ -172,3 +172,14 @@ bard-sidenav .bottom-gradient {
   transition: none !important;
   animation: none !important;
 }
+
+/* Search dialog (Base UI, not Material): same hover treatment, targeted by structure
+   because its class names are generated. The tint must not cover the result text. */
+[role="dialog"] ul a:is(:hover, :focus-visible),
+[role="dialog"] ul a:is(:hover, :focus-visible)::before,
+[role="dialog"] ul a:is(:hover, :focus-visible)::after {
+  background-color: rgba(255, 255, 255, .1) !important;
+  background-image: none !important;
+  transition: none !important;
+  animation: none !important;
+}
