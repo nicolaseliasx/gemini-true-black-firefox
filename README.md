@@ -15,3 +15,7 @@ Download the latest `.xpi`/`.zip` from the [Releases](../../releases) page. Fire
 ## Privacy
 
 The extension only injects CSS and toggles theme classes on `gemini.google.com`. It does not read your conversations, make network requests or store any data.
+
+## License
+
+[MIT](LICENSE). Free and open source: use, modify and share it however you like.
