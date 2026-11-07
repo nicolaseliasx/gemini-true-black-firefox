@@ -80,8 +80,14 @@ body {
 
 mat-sidenav,
 .mat-drawer,
+bard-sidenav,
 side-navigation-v2 {
   background-color: var(--tb-black) !important;
+}
+
+/* Neutral hover/focus layer instead of Gemini's blue tint. */
+side-navigation-v2 a.gem-nav-list-item::before {
+  background-color: #fff !important;
 }
 
 side-navigation-content {
