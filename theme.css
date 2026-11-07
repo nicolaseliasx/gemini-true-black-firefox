@@ -155,3 +155,20 @@ bard-sidenav .bottom-gradient {
 .gradient-strip {
   background-image: none !important;
 }
+
+/* No click ripple or hover transition on the sidebar. */
+side-navigation-v2 {
+  --mat-ripple-color: transparent !important;
+  --mat-ripple-hover-opacity: 0 !important;
+}
+
+side-navigation-v2 .mat-ripple-element {
+  display: none !important;
+}
+
+side-navigation-v2 a.gem-nav-list-item,
+side-navigation-v2 a.gem-nav-list-item::before,
+side-navigation-v2 a.gem-nav-list-item::after {
+  transition: none !important;
+  animation: none !important;
+}
