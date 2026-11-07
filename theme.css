@@ -85,9 +85,9 @@ side-navigation-v2 {
   background-color: var(--tb-black) !important;
 }
 
-/* Neutral hover/focus layer instead of Gemini's blue tint. */
+/* Dark grey hover/focus layer instead of Gemini's tinted one. */
 side-navigation-v2 a.gem-nav-list-item::before {
-  background-color: #fff !important;
+  background-color: var(--tb-raised-high) !important;
 }
 
 side-navigation-content {
@@ -128,4 +128,23 @@ input-area-v2 {
   background-image: none !important;
   background-color: transparent !important;
   box-shadow: none !important;
+}
+
+/* Fades that Gemini paints over the content: same shape, but true black. */
+bard-sidenav .top-gradient {
+  background-image: linear-gradient(var(--tb-black), transparent) !important;
+}
+
+bard-sidenav .bottom-gradient {
+  background-image: linear-gradient(to top, var(--tb-black), transparent) !important;
+}
+
+.input-gradient-overlay,
+.input-gradient-overlay::before {
+  background-image: linear-gradient(transparent, var(--tb-black)) !important;
+}
+
+/* Colored glow behind the start screen. */
+.gradient-strip {
+  background-image: none !important;
 }
