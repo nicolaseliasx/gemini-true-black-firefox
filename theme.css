@@ -85,9 +85,9 @@ side-navigation-v2 {
   background-color: var(--tb-black) !important;
 }
 
-/* Dark grey hover/focus layer instead of Gemini's tinted one. */
+/* Translucent grey hover/focus layer (it is painted above the label, so it must not be opaque). */
 side-navigation-v2 a.gem-nav-list-item::before {
-  background-color: var(--tb-raised-high) !important;
+  background-color: rgba(255, 255, 255, .1) !important;
 }
 
 side-navigation-content {
