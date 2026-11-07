@@ -3,29 +3,38 @@
 const HOST = "theme-host";
 const LIGHT = "light-theme";
 const DARK = "dark-theme";
+const SELECTOR = `.${HOST}, .${LIGHT}`;
 
+// Writes only when needed, so our own change never wakes the observer again.
 function forceDark(element) {
   const { classList } = element;
-  if (!classList || !(classList.contains(HOST) || classList.contains(LIGHT))) return;
-  classList.remove(LIGHT);
-  classList.add(DARK);
+  if (classList.contains(LIGHT)) classList.remove(LIGHT);
+  if (!classList.contains(DARK)) classList.add(DARK);
 }
 
-function forceDarkInTree(root) {
-  forceDark(root);
-  root.querySelectorAll?.(`.${HOST}, .${LIGHT}`).forEach(forceDark);
+function sweep() {
+  document.querySelectorAll(SELECTOR).forEach(forceDark);
 }
 
-forceDarkInTree(document);
+// Gemini's DOM changes constantly while it streams answers: coalesce into one sweep per frame.
+let scheduled = false;
+function scheduleSweep() {
+  if (scheduled) return;
+  scheduled = true;
+  requestAnimationFrame(() => {
+    scheduled = false;
+    sweep();
+  });
+}
+
+sweep();
 
 new MutationObserver((records) => {
   for (const record of records) {
-    if (record.type === "attributes") {
-      forceDark(record.target);
-      continue;
-    }
-    for (const node of record.addedNodes) {
-      if (node.nodeType === Node.ELEMENT_NODE) forceDarkInTree(node);
+    if (record.type === "childList") {
+      if (record.addedNodes.length) return scheduleSweep();
+    } else if (record.target.classList.contains(LIGHT)) {
+      return scheduleSweep();
     }
   }
 }).observe(document, {
