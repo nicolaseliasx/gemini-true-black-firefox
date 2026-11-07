@@ -65,6 +65,11 @@
   --mdc-dialog-container-color: var(--tb-overlay) !important;
 }
 
+/* Dark scrollbars everywhere (inherited), instead of the browser's light default. */
+:root {
+  scrollbar-color: var(--tb-outline) var(--tb-black) !important;
+}
+
 html,
 body,
 mat-sidenav-container,
